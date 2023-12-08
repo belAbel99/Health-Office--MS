@@ -123,6 +123,7 @@
                                         <p class="text-muted mb-2 font-13"><strong>Employee Department :</strong> <span class="ml-2"><?php echo $row->doc_dept;?></span></p>
                                         <p class="text-muted mb-2 font-13"><strong>Employee Number :</strong> <span class="ml-2"><?php echo $row->doc_number;?></span></p>
                                         <p class="text-muted mb-2 font-13"><strong>Employee Email :</strong> <span class="ml-2"><?php echo $row->doc_email;?></span></p>
+                                        <p class="text-muted mb-2 font-13"><strong>Facebook :</strong> <span class="ml-2" id="social-fb" placeholder="Url"></span></p>
 
 
                                     </div>
@@ -181,22 +182,7 @@
                                                         
                                                     </div> <!-- end row -->
 
-                                                    <!--
-                                                    <h5 class="mb-3 text-uppercase bg-light p-2"><i class="mdi mdi-office-building mr-1"></i> Company Info</h5>
-                                                    <div class="row">
-                                                        <div class="col-md-6">
-                                                            <div class="form-group">
-                                                                <label for="companyname">Company Name</label>
-                                                                <input type="text" class="form-control" id="companyname" placeholder="Enter company name">
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-md-6">
-                                                            <div class="form-group">
-                                                                <label for="cwebsite">Website</label>
-                                                                <input type="text" class="form-control" id="cwebsite" placeholder="Enter website url">
-                                                            </div>
-                                                        </div> 
-                                                    </div> 
+                                                                                                       
 
                                                     <h5 class="mb-3 text-uppercase bg-light p-2"><i class="mdi mdi-earth mr-1"></i> Social</h5>
                                                     <div class="row">
@@ -238,31 +224,6 @@
                                                         </div>
                                                         <div class="col-md-6">
                                                             <div class="form-group">
-                                                                <label for="social-lin">Linkedin</label>
-                                                                <div class="input-group">
-                                                                    <div class="input-group-prepend">
-                                                                        <span class="input-group-text"><i class="fab fa-linkedin"></i></span>
-                                                                    </div>
-                                                                    <input type="text" class="form-control" id="social-lin" placeholder="Url">
-                                                                </div>
-                                                            </div>
-                                                        </div> 
-                                                    </div> 
-
-                                                    <div class="row">
-                                                        <div class="col-md-6">
-                                                            <div class="form-group">
-                                                                <label for="social-sky">Skype</label>
-                                                                <div class="input-group">
-                                                                    <div class="input-group-prepend">
-                                                                        <span class="input-group-text"><i class="fab fa-skype"></i></span>
-                                                                    </div>
-                                                                    <input type="text" class="form-control" id="social-sky" placeholder="@username">
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-md-6">
-                                                            <div class="form-group">
                                                                 <label for="social-gh">Github</label>
                                                                 <div class="input-group">
                                                                     <div class="input-group-prepend">
@@ -272,7 +233,8 @@
                                                                 </div>
                                                             </div>
                                                         </div> 
-                                                    </div>  -->
+                                                    </div> 
+ 
                                                     
                                                     <div class="text-right">
                                                         <button type="submit" name="update_profile" class="btn btn-success waves-effect waves-light mt-2"><i class="mdi mdi-content-save"></i> Save</button>
