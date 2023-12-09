@@ -51,13 +51,27 @@
         </div>
     </header>
     <!-- Header Area End -->
+    <style>
+        .container {
+            background-color: rgba(255, 255, 255, 0.7); /* Set the background color to white with 70% opacity */
+            padding: 10px; /* Add some padding for better readability */
+            border-radius: 50px; /* Optional: Add rounded corners for a nicer look */
+        }
+
+        /* Optionally, you can style the text inside the container */
+        .container h4,
+        .container h1,
+        .container p {
+            color: #000; /* Set text color to black (you can adjust this to your preference) */
+        }
+    </style>
 
     <!-- Banner Area Starts -->
     <section class="b-ground">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8">
-                    <h4>Bag Care kanimo para kabalo ka hehe</h4>
+                    <h4>NAG CARE KANIMO, LANGGA!!</h4>
                     <h1>Serve With Excellence and Integrity</h1>
                     <p>In the ever-evolving landscape of healthcare, efficient management is the heartbeat of every successful medical practice. Introducing HOMS, your all-in-one solution for seamless health office management. Our innovative system is designed to empower healthcare professionals, streamline administrative tasks, and elevate the overall patient experience.</p>
                 </div>
