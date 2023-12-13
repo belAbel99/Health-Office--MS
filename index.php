@@ -9,8 +9,6 @@
     <!-- Page Title -->
     <title>Health Office Management System</title>
 
-    <!-- Favicon -->
-    <link rel="shortcut icon" href="assets/images/logo/favicon.png" type="image/x-icon">
 
 
 
@@ -53,16 +51,15 @@
     <!-- Header Area End -->
     <style>
         .container {
-            background-color: rgba(255, 255, 255, 0.7); /* Set the background color to white with 70% opacity */
-            padding: 10px; /* Add some padding for better readability */
-            border-radius: 50px; /* Optional: Add rounded corners for a nicer look */
+            background-color: rgba(255, 255, 255, 0.7);
+            padding: 10px; 
+            border-radius: 50px; 
         }
 
-        /* Optionally, you can style the text inside the container */
         .container h4,
         .container h1,
         .container p {
-            color: #000; /* Set text color to black (you can adjust this to your preference) */
+            color: #000; 
         }
     </style>
 

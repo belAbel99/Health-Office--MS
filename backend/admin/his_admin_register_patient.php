@@ -1,38 +1,44 @@
 <!--Server side code to handle  Patient Registration-->
 <?php
 	session_start();
-	include('assets/inc/config.php');
-		if(isset($_POST['add_patient']))
-		{
-			$pat_fname=$_POST['pat_fname'];
-			$pat_lname=$_POST['pat_lname'];
-			$pat_number=$_POST['pat_number'];
-            $pat_phone=$_POST['pat_phone'];
-            $pat_type=$_POST['pat_type'];
-            $pat_addr=$_POST['pat_addr'];
-            $pat_age = $_POST['pat_age'];
-            $pat_dob = $_POST['pat_dob'];
-            $pat_ailment = $_POST['pat_ailment'];
-            //sql to insert captured values
-			$query="insert into his_patients (pat_fname, pat_ailment, pat_lname, pat_age, pat_dob, pat_number, pat_phone, pat_type, pat_addr) values(?,?,?,?,?,?,?,?,?)";
-			$stmt = $mysqli->prepare($query);
-			$rc=$stmt->bind_param('sssssssss', $pat_fname, $pat_ailment, $pat_lname, $pat_age, $pat_dob, $pat_number, $pat_phone, $pat_type, $pat_addr);
-			$stmt->execute();
-			/*
-			*Use Sweet Alerts Instead Of This Fucked Up Javascript Alerts
-			*echo"<script>alert('Successfully Created Account Proceed To Log In ');</script>";
-			*/ 
-			//declare a varible which will be passed to alert function
-			if($stmt)
-			{
-				$success = "Patient Details Added";
-			}
-			else {
-				$err = "Please Try Again Or Try Later";
-			}
-			
-			
-		}
+    include('assets/inc/config.php');
+    
+    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+        $data = json_decode(file_get_contents('php://input'), true);
+    
+        $pat_fname = !empty($_POST['pat_fname']) ? $_POST['pat_fname'] : null;
+        $pat_lname = !empty($_POST['pat_lname']) ? $_POST['pat_lname'] : null;
+        $pat_number = !empty($_POST['pat_number']) ? $_POST['pat_number'] : null;
+        $pat_phone= !empty($_POST['pat_phone']) ? $_POST['pat_phone'] : null;
+        $pat_type = !empty($_POST['pat_type']) ? $_POST['pat_type'] : null;
+        $pat_ailment = !empty($_POST['pat_ailment']) ? $_POST['pat_ailment'] : null;
+        $pat_addr = !empty($_POST['pat_addr']) ? $_POST['pat_addr'] : null;
+        $pat_age = !empty($_POST['pat_age']) ? $_POST['pat_age'] : null;
+        $pat_ailment = !empty($_POST['pat_ailment']) ? $_POST['pat_ailment'] : null;
+    
+        // SQL to insert captured values
+        $query = "INSERT INTO his_patients (pat_fname, pat_ailment, pat_lname, pat_age, pat_number, pat_phone, pat_type, pat_addr) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
+        $stmt = $mysqli->prepare($query);
+    
+        // Bind parameters
+        $rc = $stmt->bind_param('ssssssss', $pat_fname, $pat_ailment, $pat_lname, $pat_age, $pat_number, $pat_phone, $pat_type, $pat_addr);
+    
+        // Execute the query
+        $stmt->execute();
+    
+        // Check if the query was successful
+        if ($stmt) {
+            $response = ['status' => 'success', 'message' => 'Patient Details Added'];
+        } else {
+            $response = ['status' => 'error', 'message' => 'Please Try Again Or Try Later'];
+        }
+
+       /* // Output the response as JSON
+        header('Content-Type: application/json');
+        echo json_encode($response);
+        exit; // Stop further execution
+        */
+    }
 ?>
 <!--End Server Side-->
 <!--End Patient Registration-->

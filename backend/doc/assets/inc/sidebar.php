@@ -1,4 +1,10 @@
-<div class="left-side-menu">
+<div class="left-side-menu dark-bg">
+
+<style>
+    .dark-bg {
+        background-color: #1a1a1a; /* Set your desired dark color */
+    }
+</style>
 
                 <div class="slimscroll-menu">
 
@@ -34,9 +40,7 @@
                                         <a href="his_doc_manage_patient.php">Manage Patients</a>
                                     </li>
                                     <hr>
-                                    <li>
-                                        <a href="his_doc_discharge_patient.php">Discharge Patients</a>
-                                    </li>
+
                                     <li>
                                         <a href="his_doc_patient_transfer.php">Patient Transfers</a>
                                     </li>
@@ -95,10 +99,6 @@
                                    
                                     <li>
                                         <a href="his_doc_pharm_inventory.php">Pharmaceuticals</a>
-                                    </li>
-
-                                    <li>
-                                        <a href="his_doc_equipments_inventory.php">Assets</a>
                                     </li>
                                     
                                 </ul>

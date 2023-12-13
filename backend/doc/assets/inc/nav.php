@@ -10,7 +10,13 @@
     while($row=$res->fetch_object())
     {
 ?>
-    <div class="navbar-custom">
+<div class="navbar-custom dark-bg">
+
+    <style>
+    .dark-bg {
+        background-color: #1a1a1a; /* Set your desired dark color */
+    }
+    </style>
         <ul class="list-unstyled topnav-menu float-right mb-0">
 
             <li class="d-none d-sm-block">

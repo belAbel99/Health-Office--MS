@@ -127,7 +127,7 @@
                                                     <td><?php echo $row->pay_doc_number;?></td>
                                                     <td><?php echo $row->pay_number;?></td> 
                                                     <td><?php echo date("d/m/Y - h:m:s", strtotime($mysqlDateTime));?></td>
-                                                    <td>$ <?php echo $row->pay_emp_salary;?></td>
+                                                    <td>₱ <?php echo $row->pay_emp_salary;?></td>
                                                  
                                                     <td>
                                                        <!-- <a href="his_admin_manage_payrolls.php?delete_pay_number=<?php echo $row->pay_number;?>" class="badge badge-danger"><i class="fas fa-trash"></i> Delete</a> -->
