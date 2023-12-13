@@ -72,7 +72,7 @@
                                         <!-- Logo & title -->
                                         <div class="clearfix">
                                             <div class="float-left">
-                                                <img src="assets/images/logo-dark.png" alt="" height="20">
+                                                <h2>HOMS</h2>
                                             </div>
                                             <div class="float-right">
                                                 <h4 class="m-0 d-print-none"><?php echo $row->pay_doc_name;?> Payroll</h4>
@@ -151,10 +151,10 @@
                                                                         //get total salary after tax reduction
                                                                         $total_salary = $salary - $taxable_salary;
                                                                 ?>
-                                                            <td>$ <?php echo $row->pay_emp_salary;?></td>
-                                                            <td>16%</td>
+                                                            <td>₱ <?php echo $row->pay_emp_salary;?></td>
+                                                            <td>15%</td>
                                                             
-                                                            <td class="text-right">$ <?php echo $taxable_salary;?></td>
+                                                            <td class="text-right">₱ <?php echo $taxable_salary;?></td>
                                                         </tr>
                                                         </tbody>
                                                     </table>
@@ -175,9 +175,9 @@
                                             </div> <!-- end col -->
                                             <div class="col-sm-6">
                                                 <div class="float-right">
-                                                    <p><b>Sub-total:</b> <span class="float-right">$ <?php echo $row->pay_emp_salary;?></span></p>
+                                                    <p><b>Sub-total:</b> <span class="float-right">₱ <?php echo $row->pay_emp_salary;?></span></p>
                                                     <p><b>PAYE Tax (16%) :</b> <span class="float-right"> &nbsp;&nbsp;&nbsp; <?php echo $taxable_salary;?> </span></p>
-                                                    <h3>$ <?php echo $total_salary;?></h3>
+                                                    <h3>₱ <?php echo $total_salary;?></h3>
                                                 </div>
                                                 <div class="clearfix"></div>
                                             </div> <!-- end col -->

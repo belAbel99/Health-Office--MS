@@ -18,13 +18,13 @@
 
     </head>
 
-    <body class="authentication-bg authentication-bg-pattern">
+    <body class="authentication-bg authentication">
 
         <div class="account-pages mt-5 mb-5">
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-md-8 col-lg-6 col-xl-5">
-                        <div class="card bg-pattern">
+                        <div class="card">
 
                             <div class="card-body p-4">
                                 
@@ -52,7 +52,7 @@
 
                         <div class="row mt-3">
                             <div class="col-12 text-center">
-                                <p class="text-white-50">Back to <a href="index.php" class="text-white ml-1"><b>Log In</b></a> OR <a href="../../index.php" class="text-white ml-1"><b>HomePage</b></a></p>
+                                <p class="text-dark">Back to <a href="index.php" class="text-dark"><b>Log In</b></a> OR <a href="../../index.php" class="text-dark"><b>HomePage</b></a></p>
                             </div> <!-- end col -->
                         </div>
                         <!-- end row -->

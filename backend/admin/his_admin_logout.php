@@ -18,7 +18,7 @@
 
     </head>
 
-    <body class="authentication-bg authentication-bg-pattern">
+    <body class="authentication-bg authentication">
 
         <div class="account-pages mt-5 mb-5">
             <div class="container">
@@ -46,13 +46,13 @@
                             </div> <!-- end card-body -->
                         </div>
                         <!-- end card -->
-
-                        <div class="row mt-3">
-                            <div class="col-12 text-center">
-                                <p class="text-white-50">Back to <a href="index.php" class="text-white ml-1"><b>Log In</b></a> OR <a href="../../index.php" class="text-white ml-1"><b>HomePage</b></a></p>
-                            </div> <!-- end col -->
+                        <div class="container mt-3">
+                           <div class="row">
+                              <div class="col-12 text-center">
+                          <p class="text-dark">Back to <a href="index.php" class="text-dark ml-1"><b>Log In</b></a> OR <a href="../../index.php" class="text-dark ml-1"><b>HomePage</b></a></p>
+                        </div> <!-- end col -->
+                         </div>
                         </div>
-                        <!-- end row -->
 
                     </div> <!-- end col -->
                 </div>

@@ -117,7 +117,6 @@
                                                         <option>Laboratory</option>
                                                         <option>Pharmacy</option>
                                                         <option>Accounting</option>
-                                                        <option>Surgery | Theatre</option>
                                                     </select>
                                             </div>                                         
 

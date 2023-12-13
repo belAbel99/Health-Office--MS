@@ -9,7 +9,14 @@
     while($row=$res->fetch_object())
     {
 ?>
-    <div class="navbar-custom">
+    <div class="navbar-custom dark-bg">
+
+    <style>
+    .dark-bg {
+        background-color: #1a1a1a; /* Set your desired dark color */
+    }
+</style>
+
         <ul class="list-unstyled topnav-menu float-right mb-0">
 
             <li class="d-none d-sm-block">
@@ -36,21 +43,6 @@
                     </span>
                 </a>
                 <div class="dropdown-menu dropdown-menu-right profile-dropdown ">
-                    <!-- item-->
-                    <!-- <div class="dropdown-header noti-title">
-                        <h6 class="text-overflow m-0">Welcome !</h6>
-                    </div> -->
-
-                    <!-- item-->
-                    <!-- <a href="his_admin_account.php" class="dropdown-item notify-item">
-                        <i class="fe-user"></i>
-                        <span>My Account</span>
-                    </a> -->
-
-
-                    <!-- <div class="dropdown-divider"></div> -->
-
-                    <!-- item-->
                     <a href="his_admin_logout_partial.php" class="dropdown-item notify-item">
                         <i class="fe-log-out"></i>
                         <span>Logout</span>

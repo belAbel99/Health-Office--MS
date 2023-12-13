@@ -1,5 +1,10 @@
-<div class="left-side-menu">
+<div class="left-side-menu dark-bg">
 
+<style>
+    .dark-bg {
+        background-color: #1a1a1a; /* Set your desired dark color */
+    }
+</style>
                 <div class="slimscroll-menu">
 
                     <!--- Sidemenu -->

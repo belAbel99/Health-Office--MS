@@ -68,7 +68,6 @@
                                     <div class="page-title-right">
                                         <ol class="breadcrumb m-0">
                                             <li class="breadcrumb-item"><a href="his_admin_dashboard.php">Dashboard</a></li>
-                                            <li class="breadcrumb-item"><a href="javascript: void(0);">Surgery | Theatre</a></li>
                                             <li class="breadcrumb-item active">Add Patient</li>
                                         </ol>
                                     </div>
@@ -113,43 +112,9 @@
                                                     <label for="inputEmail4" class="col-form-label">Patient Number</label>
                                                     <input readonly type="text" required="required" value="<?php echo $row->pat_number;?>" name="s_pat_number" class="form-control" id="inputEmail4" placeholder="DD/MM/YYYY">
                                                 </div>
-                                                <div class="form-group col-md-6">
-                                                    <label for="inputState" class="col-form-label">Surgeon</label>
-                                                    <select id="inputState" required="required" name="s_doc" class="form-control">
-                                                    <?php
-                                                    
-                                                        $ret="SELECT * FROM  his_docs WHERE doc_dept = 'Surgery | Theatre' ORDER BY RAND() "; 
-                                                        //sql code to get to ten docs  randomly
-                                                        $stmt= $mysqli->prepare($ret) ;
-                                                        $stmt->execute() ;//ok
-                                                        $res=$stmt->get_result();
-                                                        $cnt=1;
-                                                        while($row=$res->fetch_object())
-                                                        {
-                                                    ?>
-                                                        <option><?php echo $row->doc_fname;?> <?php echo $row->doc_lname;?></option>
-
-                                                    <?php }?>
-                                                    </select>
-                                                </div>
-                                                <div class="form-group col-md-6" style="display:none">
-                                                    <label for="inputPassword4" class="col-form-label">Surgery Status</label>
-                                                    <input required="required" type="text" value="Undergoing" name="s_pat_status" class="form-control"  id="inputPassword4" placeholder="Patient`s Age">
-                                                </div>
                                             </div>
 
                                     
-                                            <div class="form-row">
-                                               
-                                                <div class="form-group col-md-2" style="display:none">
-                                                    <?php 
-                                                        $length = 5;    
-                                                        $s_number =  substr(str_shuffle('0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ'),1,$length);
-                                                    ?>
-                                                    <label for="inputZip" class="col-form-label">Surgery Record Number</label>
-                                                    <input type="text" name="s_number" value="<?php echo $s_number;?>" class="form-control" id="inputZip">
-                                                </div>
-                                            </div>
 
                                             <button type="submit" name="add_patient" class="ladda-button btn btn-success" data-style="expand-right">Add Patient</button>
 
