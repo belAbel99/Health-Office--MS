@@ -12,6 +12,7 @@
             $pres_number = $_POST['pres_number'];
             $pres_ins = $_POST['pres_ins'];
             $pres_pat_ailment = $_POST['pres_pat_ailment'];
+            
             //sql to insert captured values
 			$query="INSERT INTO  his_prescriptions  (pres_pat_name, pres_pat_number, pres_pat_type, pres_pat_addr, pres_pat_age, pres_number, pres_pat_ailment, pres_ins) VALUES(?,?,?,?,?,?,?,?)";
 			$stmt = $mysqli->prepare($query);

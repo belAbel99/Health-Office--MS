@@ -1,0 +1,10 @@
+
+**Admin Login Details**
+
+Email   : admin@mail.com
+Password: Password@123
+
+ang database is naa sa database na folder sir.
+
+ang ge gamit ani na version sa php sir is version 7.4.3 and same version sab sa xammp, akoa lang e attach and gdrive para sa mga
+app kailangan.

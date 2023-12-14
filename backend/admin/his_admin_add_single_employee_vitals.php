@@ -10,9 +10,7 @@
             $vit_heartpulse = $_POST['vit_heartpulse'];
             $vit_resprate  = $_POST['vit_resprate'];
             $vit_bloodpress = $_POST['vit_bloodpress'];
-            //$pres_ins = $_POST['pres_ins'];
-            //$pres_pat_ailment = $_POST['pres_pat_ailment'];
-            //sql to insert captured values
+
 			$query="INSERT INTO  his_vitals  (vit_number, vit_pat_number, vit_bodytemp, vit_heartpulse, vit_resprate, vit_bloodpress) VALUES(?,?,?,?,?,?)";
 			$stmt = $mysqli->prepare($query);
 			$rc=$stmt->bind_param('ssssss', $vit_number, $vit_pat_number, $vit_bodytemp, $vit_heartpulse, $vit_resprate, $vit_bloodpress);

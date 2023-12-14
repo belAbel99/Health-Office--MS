@@ -6,12 +6,12 @@
 		{
 			$mdr_pat_name = $_POST['mdr_pat_name'];
 			$mdr_pat_number = $_POST['mdr_pat_number'];
-            //$pres_pat_type = $_POST['pres_pat_type'];
             $mdr_pat_adr = $_POST['mdr_pat_adr'];
             $mdr_pat_age = $_POST['mdr_pat_age'];
             $mdr_number = $_POST['mdr_number'];
             $mdr_pat_prescr = $_POST['mdr_pat_prescr'];
             $mdr_pat_ailment = $_POST['mdr_pat_ailment'];
+            
             //sql to insert captured values
 			$query="INSERT INTO  his_medical_records  (mdr_pat_name, mdr_pat_number, mdr_pat_adr, mdr_pat_age, mdr_number, mdr_pat_prescr, mdr_pat_ailment) VALUES(?,?,?,?,?,?,?)";
 			$stmt = $mysqli->prepare($query);

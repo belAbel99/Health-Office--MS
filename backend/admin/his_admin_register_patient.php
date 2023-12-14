@@ -14,14 +14,15 @@
         $pat_ailment = !empty($_POST['pat_ailment']) ? $_POST['pat_ailment'] : null;
         $pat_addr = !empty($_POST['pat_addr']) ? $_POST['pat_addr'] : null;
         $pat_age = !empty($_POST['pat_age']) ? $_POST['pat_age'] : null;
+        $pat_dob = !empty($_POST['pat_dob']) ? $_POST['pat_dob'] : null;
         $pat_ailment = !empty($_POST['pat_ailment']) ? $_POST['pat_ailment'] : null;
     
         // SQL to insert captured values
-        $query = "INSERT INTO his_patients (pat_fname, pat_ailment, pat_lname, pat_age, pat_number, pat_phone, pat_type, pat_addr) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
+        $query = "INSERT INTO his_patients (pat_fname, pat_ailment, pat_lname, pat_dob, pat_age, pat_number, pat_phone, pat_type, pat_addr) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
         $stmt = $mysqli->prepare($query);
     
         // Bind parameters
-        $rc = $stmt->bind_param('ssssssss', $pat_fname, $pat_ailment, $pat_lname, $pat_age, $pat_number, $pat_phone, $pat_type, $pat_addr);
+        $rc = $stmt->bind_param('sssssssss', $pat_fname, $pat_ailment, $pat_lname, $pat_dob, $pat_age, $pat_number, $pat_phone, $pat_type, $pat_addr);
     
         // Execute the query
         $stmt->execute();
@@ -108,7 +109,7 @@
                                             <div class="form-row">
                                                 <div class="form-group col-md-6">
                                                     <label for="inputEmail4" class="col-form-label">Date Of Birth</label>
-                                                    <input required="required" type="date"  name="t_date" class="form-control"  id="inputPassword4" placeholder="DD/MM/YYYY">
+                                                    <input required="required" type="date"  name="pat_dob" class="form-control"  id="inputPassword4" placeholder="DD/MM/YYYY">
                                                 </div>
                                                 <div class="form-group col-md-6">
                                                     <label for="inputPassword4" class="col-form-label">Age</label>

@@ -4,26 +4,6 @@
   include('assets/inc/checklogin.php');
   check_login();
   $aid=$_SESSION['ad_id'];
-  /*
-  if(isset($_GET['delete']))
-  {
-        $id=intval($_GET['delete']);
-        $adn="delete from his_docs where doc_id=?";
-        $stmt= $mysqli->prepare($adn);
-        $stmt->bind_param('i',$id);
-        $stmt->execute();
-        $stmt->close();	 
-  
-          if($stmt)
-          {
-            $success = "Employee Fired";
-          }
-            else
-            {
-                $err = "Try Again Later";
-            }
-    }
-    */
 ?>
 
 <!DOCTYPE html>

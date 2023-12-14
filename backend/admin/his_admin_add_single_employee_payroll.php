@@ -6,13 +6,11 @@
 		{
 			$pay_number = $_POST['pay_number'];
 			$pay_doc_name = $_POST['pay_doc_name'];
-            //$pres_pat_type = $_POST['pres_pat_type'];
             $pay_doc_number = $_POST['pay_doc_number'];
             $pay_doc_email = $_POST['pay_doc_email'];
             $pay_emp_salary = $_POST['pay_emp_salary'];
             $pay_descr = $_POST['pay_descr'];
-            //$mdr_pat_ailment = $_POST['mdr_pat_ailment'];
-            //sql to insert captured values
+
 			$query="INSERT INTO  his_payrolls  (pay_number, pay_doc_name, pay_doc_number, pay_doc_email, pay_emp_salary, pay_descr) VALUES(?,?,?,?,?,?)";
 			$stmt = $mysqli->prepare($query);
 			$rc=$stmt->bind_param('ssssss', $pay_number, $pay_doc_name, $pay_doc_number, $pay_doc_email, $pay_emp_salary, $pay_descr);

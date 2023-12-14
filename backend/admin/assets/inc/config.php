@@ -2,6 +2,6 @@
 $dbuser="root";
 $dbpass="";
 $host="localhost";
-$db="hmisphp";
+$db="healthofficedb";
 $mysqli=new mysqli($host,$dbuser, $dbpass, $db);
 ?>
